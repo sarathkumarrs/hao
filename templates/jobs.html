@@ -63,7 +63,7 @@
                 <div>
                     <b>{{job.title}}</b><br>
                     <p>{{job.description}}</p>
-                    <div class="slots">120 Job Vacancy</div>
+                    <div class="slots">{{job.vacancies}} Vacancy</div>
                 </div></a>
             </div>
             {% endfor %}
@@ -89,7 +89,7 @@
                     <p>Follow us on</p>
                     <div class="icons">
                         {% if social.instagram %}
-                        <a href=""><img src="{% static 'images/instagram.png' %}" alt=""></a>
+                        <a href="{{social.instagram}}"><img src="{% static 'images/instagram.png' %}" alt=""></a>
                         {% endif %}
                         {% if social.facebook %}
                         <a href=""><img src="{% static 'images/Vector.png' %}" alt=""></a>
