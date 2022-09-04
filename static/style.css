@@ -346,7 +346,7 @@ h2{
     filter: contrast(0%);
 }
 #navbar{
-    background-color: rgba(255, 255, 255, 0.842);
+    background-color: rgb(163, 197, 197, 0.842);
     height: 100%;
     z-index: 1;
     width: 0%;
