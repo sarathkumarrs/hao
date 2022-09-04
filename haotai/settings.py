@@ -135,6 +135,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     Path(BASE_DIR, "static"),
 )
+STATIC_ROOT = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = Path(BASE_DIR, "media")
 
