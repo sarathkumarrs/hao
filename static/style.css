@@ -297,9 +297,6 @@ h2{
     .more a{
         color: white;
     }
-    .vacancy p{
-        height: 0 !important;
-    }
     .slots{
         margin-left: 10px;
     }
