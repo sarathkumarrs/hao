@@ -314,8 +314,6 @@ h2{
 }
 .menubar{
     padding: 50px;
-    padding-left: 0;
-    padding-right: 100px;
 }
 .menuclick{
     display: grid;
@@ -347,10 +345,12 @@ h2{
 }
 #navbar{
     background-color: rgb(163, 197, 197, 0.842);
-    height: 100%;
+    height: 100vh;
     z-index: 1;
     width: 0%;
     overflow-x: hidden;
     position: fixed;
     transition: 0.5s;
+    top: 0;
+    left: 0;
 }
