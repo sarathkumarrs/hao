@@ -52,10 +52,18 @@
                 <div class="follow">
                     <p>Follow us on</p>
                     <div class="mediaicon">
-                        <a href=""><img src="{% static 'images/instagram.png'%}" alt=""></a>
-                        <a href=""><img src="{% static 'images/Vector.png'%}" alt=""></a>
-                        <a href=""><img src="{% static 'images/Vector(1).png'%}" alt=""></a>
-                        <a href="mailto:email@gmail.com"><img src="{% static 'images/mail.png'%}" alt=""></a>
+                        {% if social.instagram %}
+                        <a href="{{social.instagram}}"><img src="{% static 'images/instagram.png' %}" alt=""></a>
+                        {% endif %}
+                        {% if social.facebook %}
+                        <a href="{{social.facebook}}"><img src=".{% static 'images/Vector.png' %}" alt=""></a>
+                        {% endif %}
+                        {% if social.twitter %}
+                        <a href="{{social.twitter}}"><img src="{% static 'images/Vector(1).png' %}" alt=""></a>
+                        {% endif %}
+                        {% if social.email %}
+                        <a href="mailto:{{social.email}}"><img src="{% static 'images/mail.png' %}" alt=""></a>
+                        {% endif %}
                         <a href="tel:{{social.phone}}"><img src="{% static 'images/contact.png'%}" alt=""></a>
                     </div>
                 </div>
