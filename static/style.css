@@ -110,7 +110,6 @@ h2{
 .job{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    padding: 20px;
 }
 .vacancy{
     grid-column: span 2;
@@ -299,7 +298,7 @@ h2{
         color: white;
     }
     .vacancy p{
-        height: 120px;
+        height: 0 !important;
     }
     .slots{
         margin-left: 10px;
