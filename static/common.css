@@ -1,9 +1,16 @@
+body{
+    background-color:rgb(230, 235, 168);
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
+    border: 10px solid black;
+}
+
 .details a{
     font-weight: bold;
     font-size: 1.125rem;
 }
 .details{
-    gap: 100px;
+    gap: 80px;
     align-items: center;
 }
 .head{
@@ -26,9 +33,90 @@
     padding: 18px 32px;
     line-height: 1;
     font-weight: 800;
-    background-color: #6BE9FF;
+    border-radius: 50px;
    
 }
-.hiring a{
-    /* color: white; */
+.colorred{
+    background-color: red;
 }
+#red{
+    background-color: red;
+}
+.red{
+    color: red !important;
+    text-decoration: underline;
+
+}
+.hiring{
+    text-decoration: underline;
+}
+.hiring a{
+    color: red !important;
+    text-decoration: underline;
+}
+.blink{
+    background-color: black;
+    padding: 18px 32px;
+    border-radius: 50px;
+    text-decoration: underline;
+}
+
+.blink span{
+    color: black;
+    animation: blink 1s linear infinite;
+    text-decoration: underline;
+}
+@keyframes blink{
+0%{opacity: 0;}
+50%{opacity: .5;}
+100%{opacity: 1;}
+}
+#homenormal{
+    font-style: normal;
+    color: black;
+    text-decoration: underline;
+}
+
+.paragraph .p::before{
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 5px solid black;
+}
+.borders{
+    position: relative;
+    border: 5px solid black;
+}
+
+.borders:before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: 5px solid red;
+  }
+.options a{
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+.text-decoration-black{
+    text-decoration: underline;
+    text-decoration-color:black;
+}
+
+.pdfblink{
+    animation: blinkp 1s linear infinite;
+    text-decoration: underline;
+}
+@keyframes blinkp{
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+    }

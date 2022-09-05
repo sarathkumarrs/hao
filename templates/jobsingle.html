@@ -19,41 +19,44 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;0,600;1,600&family=Roboto+Flex:opsz,wght@8..144,400;8..144,600;8..144,700;8..144,900&display=swap" rel="stylesheet"> 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'style.css' %}">
 <link rel="stylesheet" href="{% static 'common.css' %}">
 
 </head>
 <body>
     <section class="head">
         <div class="haotai">
-            <div><img src="{% static 'images/logo 1.png' %}" alt=""></div>
-            <div><h1>Hao Tai</h1></div>
+            <div><img src="{% static 'images/logo 1.png'%}" alt=""></div>
+            <div><h1 class="borders" style="text-decoration: underline;">Hao-Tai</h1></div>
         </div>
         <div class="details">
-            <div class="home"><a href="{% url 'web:home' %}">HOME</a></div>
-            <div class="home"><a href="{% url 'web:about' %}">ABOUT</a></div>
-            <div class="home"><a href="{% url 'web:jobs' %}">JOBS</a></div>
-            <div class="home active"><a href="{% url 'web:home' %}#benefits">BENIFITS</a></div>
-            <div class="home hiring"><a href="{% url 'web:hiring' %}">HIRING</a></div>
+            <div class="home active"><a href="{% url 'web:home' %}"><h1 id="homenormal">Home</h1> </a></div>
+            <div class="home blink "><a href="{% url 'web:about' %}"><span class="red">ABOUT</span> </a></div>
+            <div class="home blink "><a href="{% url 'web:jobs' %}"><span class="red">JOBS</span> </a></div>
+            <div class="home blink "><a href="{% url 'web:home' %}#benefits"> <span class="red">BENIFITS</span></a></div>
+            <div class="home hiring blink colorred" id="red" style="font-style: normal;"><a href="{% url 'web:hiring' %}"><span style="font-size: 37px;">Hiring</span></a></div>
         </div>
-        <div class="menu" id="sreyas"><img src="{% static 'images/Menu.png" alt=""></div>
+        <div class="menu" id="sreyas">
+            <img src="{% static 'images/Menu.png'%}" alt="" >
+        </div>
         <div id="navbar" class="overlay">
             <section class="menubar">
                 <div class="menuclick">
-                    <img src="{% static 'images/logo 1.png" alt="">
+                    <img src="{% static 'images/logo 1.png' % }" alt="">
                     <a href="{% url 'web:home' %}">Home</a>
                     <a href="{% url 'web:about' %}">About</a>
                     <a href="{% url 'web:jobs' %}">Jobs</a>
                     <a href="{% url 'web:home' %}#benefits">Benefits</a>
-                    <a id="menuclose"><img src="{% static 'images/Frame 2.png" alt=""></a>
+                    <a id="menuclose"><img src="{% static 'images/Frame 2.png'%}" alt=""></a>
                 </div>
                 <div class="follow">
                     <p>Follow us on</p>
                     <div class="mediaicon">
-                        <a href=""><img src="{% static 'images/instagram.png" alt=""></a>
-                        <a href=""><img src="{% static 'images/Vector.png" alt=""></a>
-                        <a href=""><img src="{% static 'images/Vector(1).png" alt=""></a>
-                        <a href="mailto:email@gmail.com"><img src="{% static 'images/mail.png" alt=""></a>
-                        <a href="tel:99999 99999"><img src="{% static 'images/contact.png" alt=""></a>
+                        <a href=""><img src="{% static 'images/instagram.png'%}" alt=""></a>
+                        <a href=""><img src="{% static 'images/Vector.png'%}" alt=""></a>
+                        <a href=""><img src="{% static 'images/Vector(1).png'%}" alt=""></a>
+                        <a href="mailto:email@gmail.com"><img src="{% static 'images/mail.png'%}" alt=""></a>
+                        <a href="tel:{{social.phone}}"><img src="{% static 'images/contact.png'%}" alt=""></a>
                     </div>
                 </div>
             </section>
@@ -102,7 +105,7 @@
         <div class="cv"><a href="mailto:{{social.email}}">Sent CV</a></div>
     </section>
     <section class="blue">
-        <h2>Hao Tai</h2>
+        <h2 class="text-decoration-black">Hao-Tai</h2>
         <div class="connect">
             <div class="links">
                 <b>Links</b>
@@ -115,19 +118,19 @@
             </div>
             <div class="media">
                 <div>
-                    <p>Call us <br><br><a id="call" href="tel:99999 99999"> 99999 99999</a></p>
+                    <p class="text-decoration-black">Call us <br><br><a id="call" href="tel:{{social.phone}}"> {{social.phone}}</a></p>
                 </div>
                 <div>
-                    <p>Follow us on</p>
+                    <p class="text-decoration-black">Follow us on</p>
                     <div class="icons">
                         {% if social.instagram %}
-                        <a href=""><img src="{% static 'images/instagram.png' %}" alt=""></a>
+                        <a href="{{social.instagram}}"><img src="{% static 'images/instagram.png' %}" alt=""></a>
                         {% endif %}
                         {% if social.facebook %}
-                        <a href=""><img src=".{% static 'images/Vector.png' %}" alt=""></a>
+                        <a href="{{social.facebook}}"><img src=".{% static 'images/Vector.png' %}" alt=""></a>
                         {% endif %}
                         {% if social.twitter %}
-                        <a href=""><img src="{% static 'images/Vector(1).png' %}" alt=""></a>
+                        <a href="{{social.twitter}}"><img src="{% static 'images/Vector(1).png' %}" alt=""></a>
                         {% endif %}
                         {% if social.email %}
                         <a href="mailto:{{social.email}}"><img src="{% static 'images/mail.png' %}" alt=""></a>

@@ -27,14 +27,14 @@
     <section class="head">
         <div class="haotai">
             <div><img src="{% static 'images/logo 1.png'%}" alt=""></div>
-            <div><h1>Hao Tai</h1></div>
+            <div><h1 class="borders" style="text-decoration: underline;">Hao-Tai</h1></div>
         </div>
         <div class="details">
-            <div class="home active"><a href="{% url 'web:home' %}">HOME</a></div>
-            <div class="home"><a href="{% url 'web:about' %}">ABOUT</a></div>
-            <div class="home"><a href="{% url 'web:jobs' %}">JOBS</a></div>
-            <div class="home"><a href="{% url 'web:home' %}#benefits">BENIFITS</a></div>
-            <div class="home hiring"><a href="{% url 'web:hiring' %}">HIRING</a></div>
+            <div class="home active"><a href="{% url 'web:home' %}"><h1 id="homenormal">Home</h1> </a></div>
+            <div class="home blink "><a href="{% url 'web:about' %}"><span class="red">ABOUT</span> </a></div>
+            <div class="home blink "><a href="{% url 'web:jobs' %}"><span class="red">JOBS</span> </a></div>
+            <div class="home blink "><a href="{% url 'web:home' %}#benefits"> <span class="red">BENIFITS</span></a></div>
+            <div class="home hiring blink colorred" id="red" style="font-style: normal;"><a href="{% url 'web:hiring' %}"><span style="font-size: 37px;">Hiring</span></a></div>
         </div>
         <div class="menu" id="sreyas">
             <img src="{% static 'images/Menu.png'%}" alt="" >
@@ -65,8 +65,8 @@
     <section class="second">
         <div class="paragraph">
             <div class="third">
-                <h1>Hao Tai</h1>
-            <p>
+                <h1>Hao-Tai</h1>
+            <p class="borders" style="line-height: 2; text-align:center; padding:10px;">
                 {{about.about}}
             </p>
             
@@ -79,11 +79,11 @@
             </div>
         </div>
         <div class="blank">
-            <img src="{{about.home_image.url}}" alt="Photo by Abbe Sublett on Unsplash">
+            <img src="{{about.home_image.url}}" alt="Photo by Abbe Sublett on Unsplash" style="border: 2px solid black;">
         </div>
     </section>
     <section >
-        <h2>Job Categories</h2>
+        <h2 style="text-decoration: underline;">Job Categories</h2>
         <div class="job">
             {% for category in categories %}
             <div class="vacancy"><a href="{{category.get_absolute_url}}">
@@ -105,11 +105,11 @@
         </div>
     </section>
     <section class="violet" id="benefits">
-        <h2>Benefits</h2>
+        <h2 style="text-decoration: underline;">Benefits</h2>
         <div class="benefits">
             
             <div class="travel">
-                <h3>Before Arrival</h3>
+                <h3 style="text-decoration: underline;">Before Arrival</h3>
                 <ul>
                     <li>Flight ticket</li>
                     <li>Thai pass</li>
@@ -119,10 +119,10 @@
                 </ul>
             </div>
             <div class="travel">
-                <h3>After arrival to Thailand</h3>
+                <h3 style="text-decoration: underline;">After arrival to Thailand</h3>
                 <ul>
                     <p class="pdfview">
-                        <a href="{% url 'web:pdfview' %}">Click here to see the full Road Map</a>
+                        <a href="{% url 'web:pdfview' %}" class="pdfblink">Click here to see the full Road Map</a>
                     </p>
                     <li>Cab Pick-up and all other transportation facilities </li>
                     <li>Hotel stay</li>
@@ -130,7 +130,7 @@
                 </ul>
             </div>
             <div class="travel">
-                <h3>During the work</h3>
+                <h3 style="text-decoration: underline;">During the work</h3>
                 <ul>
                     <li>Air-conditioned Accommodation and 3 times meals a day </li>
                     <li>Personal cell phones with Internet </li>
@@ -141,7 +141,7 @@
         </div>
     </section>
     <section class="blue">
-        <h2>Hao Tai</h2>
+        <h2 class="text-decoration-black">Hao-Tai</h2>
         <div class="connect">
             <div class="links">
                 <b>Links</b>
@@ -154,19 +154,19 @@
             </div>
             <div class="media">
                 <div>
-                    <p>Call us <br><br><a id="call" href="tel:{{social.phone}}"> {{social.phone}}</a></p>
+                    <p class="text-decoration-black">Call us <br><br><a id="call" href="tel:{{social.phone}}"> {{social.phone}}</a></p>
                 </div>
                 <div>
-                    <p>Follow us on</p>
+                    <p class="text-decoration-black">Follow us on</p>
                     <div class="icons">
                         {% if social.instagram %}
-                        <a href=""><img src="{% static 'images/instagram.png' %}" alt=""></a>
+                        <a href="{{social.instagram}}"><img src="{% static 'images/instagram.png' %}" alt=""></a>
                         {% endif %}
                         {% if social.facebook %}
-                        <a href=""><img src=".{% static 'images/Vector.png' %}" alt=""></a>
+                        <a href="{{social.facebook}}"><img src=".{% static 'images/Vector.png' %}" alt=""></a>
                         {% endif %}
                         {% if social.twitter %}
-                        <a href=""><img src="{% static 'images/Vector(1).png' %}" alt=""></a>
+                        <a href="{{social.twitter}}"><img src="{% static 'images/Vector(1).png' %}" alt=""></a>
                         {% endif %}
                         {% if social.email %}
                         <a href="mailto:{{social.email}}"><img src="{% static 'images/mail.png' %}" alt=""></a>

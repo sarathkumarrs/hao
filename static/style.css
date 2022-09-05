@@ -11,12 +11,6 @@ ul {
 li{
     margin-top: ;
 }
-body{
-    background-color:rgb(163, 197, 197);
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Roboto Flex', sans-serif;
-    border: 10px solid black;
-}
 .menu{
     display: none;
     margin: 25px;
@@ -39,9 +33,10 @@ a:hover{
     display: flex;
     margin: 0 10px 0 0;
     width: 50%;
+    align-items: center;
 }
 .haotai h1{
-    padding: 20px;
+    padding: 12px;
 }
 .details{
     display: flex;
@@ -60,7 +55,7 @@ a:hover{
     margin-bottom: 100px;
 }
 .third h1{
-    padding-bottom: 15px;
+    text-align: center;
 }
 .paragraph{
     grid-column: span 1;
@@ -83,6 +78,7 @@ a:hover{
     border-radius: 10px;
     margin-right: 20px;
     grid-column: span 1;
+    border: 2px solid black;
 }
 .number p{
     padding: 10px;
