@@ -34,6 +34,7 @@
             <div class="home"><a href="{% url 'web:about' %}">ABOUT</a></div>
             <div class="home"><a href="{% url 'web:jobs' %}">JOBS</a></div>
             <div class="home"><a href="{% url 'web:home' %}#benefits">BENIFITS</a></div>
+            <div class="home hiring"><a href="{% url 'web:hiring' %}">HIRING</a></div>
         </div>
         <div class="menu" id="sreyas">
             <img src="{% static 'images/Menu.png'%}" alt="" >
@@ -69,9 +70,6 @@
                 {{about.about}}
             </p>
             
-            <div class="read">
-                <a href="{% url 'web:about' %}"><p> Read more </p></a>
-            </div>
             </div>
             <div class="blocks">
                 <div class="number"><p><b>{{about.employee_cout}}</b><br> Num. of Employers</p></div>

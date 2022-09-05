@@ -58,3 +58,11 @@ def jobsingle(request,id):
 def pdfview(request):
     filepath = os.path.join('static', 'Hoatai secure.pdf')
     return FileResponse(open(filepath, 'rb'), content_type='application/pdf')
+
+def aboutpdf(request):
+    filepath = os.path.join('static', 'haotai.pdf')
+    return FileResponse(open(filepath, 'rb'), content_type='application/pdf')
+
+def hiring(request):
+    filepath = os.path.join('static', 'hiring.pdf')
+    return FileResponse(open(filepath, 'rb'), content_type='application/pdf')

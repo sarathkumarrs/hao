@@ -65,7 +65,11 @@
         <div class="primary">
                 <div class="aboutus">
                 <p>{{about.about|safe}}</p>
+                <div class="read">
+                    <a href="{% url 'web:aboutpdf' %}"><p> Read more </p></a>
+                </div>
             </div>
+
             <div class="empty">
                 <img src="{{about.about_image.url}}" alt="">
             </div>

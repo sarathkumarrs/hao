@@ -1,6 +1,34 @@
 .details a{
     font-weight: bold;
+    font-size: 1.125rem;
 }
 .details{
     gap: 100px;
+    align-items: center;
+}
+.head{
+    align-items: center;
+}
+
+.read {
+    text-align: center;
+    background-color: #FF575E;
+    border-radius: 10px;
+    max-width: fit-content;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.read p {
+    color: white;
+    padding: 5px;
+}
+.hiring{
+    padding: 18px 32px;
+    line-height: 1;
+    font-weight: 800;
+    background-color: #6BE9FF;
+   
+}
+.hiring a{
+    /* color: white; */
 }
