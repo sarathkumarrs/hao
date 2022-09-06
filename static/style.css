@@ -266,6 +266,7 @@ h2{
     }
     .vacancy a{
         display: flex;
+        flex-direction: column;
     }
     #more{
         padding: 5px;
