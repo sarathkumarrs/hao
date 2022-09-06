@@ -69,6 +69,7 @@
 .currency{
     background-color: #FFE2E4;
     border-radius: 12px;
+    width: 200px;
 }
 .vacancy{
     background-color: #FFE2E4;
@@ -143,9 +144,6 @@
     padding: 5px;
     border-radius: 10px;
     flex-direction: column;
-    }
-    .crypto b{
-        display: none;
     }
     .note br{
         display: none;
