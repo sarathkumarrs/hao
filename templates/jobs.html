@@ -75,7 +75,7 @@
         <div class="job">
             {% for job in jobs %}
             <div class="vacancy"><a href="{{job.get_absolute_url}}">
-                <div><img src="{{job.category.image.url}}" alt=""></div>
+                <div><img src="{{job.category.image.url}}" alt="" width="100%"></div>
                 <div>
                     <b>{{job.title}}</b><br>
                     <p>{{job.description}}</p>
