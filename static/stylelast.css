@@ -58,7 +58,7 @@
     margin: 50px;
 }
 .crypto img{
-    width: 140px;
+    width: 100%;
 }
 .crypto p{
     max-width : 400px;
@@ -69,7 +69,6 @@
 .currency{
     background-color: #FFE2E4;
     border-radius: 12px;
-    height: 140px;
 }
 .vacancy{
     background-color: #FFE2E4;
@@ -143,6 +142,7 @@
     border: 1px solid #FFE2E4;
     padding: 5px;
     border-radius: 10px;
+    flex-direction: column;
     }
     .crypto b{
         display: none;
